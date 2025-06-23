@@ -2,17 +2,28 @@ const express = require('express');
 const router = express.Router();
 const Post = require('../models/Post');
 
-// Public GET: fetch all posts
+// GET: fetch all posts or search
 router.get('/', async (req, res) => {
   try {
-    const posts = await Post.find().sort({ createdAt: -1 });
+    const { search } = req.query;
+    let filter = {};
+    if (search) {
+      filter = {
+        $or: [
+          { title:   { $regex: search, $options: 'i' } },
+          { content: { $regex: search, $options: 'i' } },
+          { desc:    { $regex: search, $options: 'i' } }
+        ]
+      };
+    }
+    const posts = await Post.find(filter).sort({ createdAt: -1 });
     res.json(posts);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
 
-// Public GET: fetch a single post by id
+// GET: fetch a single post by id
 router.get('/:id', async (req, res) => {
   try {
     const post = await Post.findById(req.params.id);
@@ -23,7 +34,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// Public POST: create a new post
+// POST: create a new post
 router.post('/', async (req, res) => {
   try {
     const newPost = new Post(req.body);

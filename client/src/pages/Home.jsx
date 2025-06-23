@@ -94,6 +94,29 @@ const Home = () => {
           </div>
         </div>
       </section>
+{/* Quick Links / Upgrade Section */}
+<section className="quick-links">
+  <h2>Explore More</h2>
+  <div className="quick-links-grid">
+    <a href="/notifications" className="quick-link-card">
+      <span role="img" aria-label="Notifications">🔔</span>
+      <span>Notifications</span>
+    </a>
+    <a href="/search" className="quick-link-card">
+      <span role="img" aria-label="Search">🔎</span>
+      <span>Search</span>
+    </a>
+    <a href="/admin" className="quick-link-card">
+      <span role="img" aria-label="Admin Dashboard">🛠️</span>
+      <span>Admin Dashboard</span>
+    </a>
+    {/* Add more links as you build new features */}
+    <a href="/profile" className="quick-link-card">
+      <span role="img" aria-label="Profile">👤</span>
+      <span>Profile</span>
+    </a>
+  </div>
+</section>
 
       {/* Blog Cards Section */}
       <section className="container featured-posts">

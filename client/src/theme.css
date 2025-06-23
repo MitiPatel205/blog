@@ -1574,3 +1574,125 @@ a {
   font-size: 1.1rem;
   margin: 0.5rem 0;
 }
+.admin-dashboard {
+  padding: 2rem;
+}
+
+.admin-tabs {
+  margin-bottom: 1rem;
+}
+
+.admin-tabs button {
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.admin-tabs .active {
+  background: #007bff;
+  color: white;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  border: 1px solid #eee;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.danger {
+  color: white;
+  background: #dc3545;
+  border: none;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+}
+.quick-links {
+  margin: 2rem auto;
+  max-width: 900px;
+  text-align: center;
+}
+.quick-links-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.quick-link-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f7f8fa;
+  border-radius: 10px;
+  padding: 1.2rem 2rem;
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: box-shadow 0.2s, transform 0.2s;
+  min-width: 130px;
+}
+.quick-link-card span:first-child {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+.quick-link-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  background: #e9f2ff;
+  transform: translateY(-2px) scale(1.03);
+}
+.notifications-page, .search-page {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+.notifications-list {
+  list-style: none;
+  padding: 0;
+}
+.notifications-list li {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+.notifications-list li.unread {
+  background: #e6f7ff;
+  font-weight: bold;
+}
+.notifications-list li.read {
+  color: #888;
+}
+.search-form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.search-form input {
+  flex: 1;
+  padding: 0.6rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.search-form button {
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  border: none;
+  background: #007bff;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+.search-results ul {
+  list-style: none;
+  padding: 0;
+}
+.search-results li {
+  margin-bottom: 0.8rem;
+}
